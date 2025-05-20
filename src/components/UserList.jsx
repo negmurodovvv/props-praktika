@@ -8,6 +8,7 @@ const UserList = () => {
 			<div className='grid grid-cols-4 justify-between gap-5 py-4'>
 				{data.map((item, i) => (
 					<Card
+						key={i}
 						name={item.name}
 						firstText={item.firstText}
 						secondText={item.secondText}

@@ -1,7 +1,7 @@
 import Card from './components/Card'
 import CardTwo from './components/CardTwo'
 import UserList from './components/UserList'
-import UserCard from './components/userCard'
+import UserCard from './components/UserCard'
 
 function App() {
 	return (
