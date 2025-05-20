@@ -1,3 +1,4 @@
+import { data } from '../mock-data'
 import Card from './Card'
 
 const UserList = () => {
@@ -5,13 +6,15 @@ const UserList = () => {
 		<div>
 			<h3 className='text-center text-4xl font-semibold py-6'>User Card</h3>
 			<div className='grid grid-cols-4 justify-between gap-5 py-4'>
-				<Card
-					name='Emily Johnson'
-					firstText='Product Manager'
-					secondText='Product Development'
-					img='images/First.svg'
-				/>
-
+				{data.map((item, i) => (
+					<Card
+						name={item.name}
+						firstText={item.firstText}
+						secondText={item.secondText}
+						img={item.imageSource}
+					/>
+				))}
+				{/* 
 				<Card
 					name='Arjun Patel'
 					firstText='Software Engineer'
@@ -59,7 +62,7 @@ const UserList = () => {
 					firstText='Quality Assurance'
 					secondText='Quality Control'
 					img='images/Nine.svg'
-				/>
+				/> */}
 			</div>
 
 			<h4 className='text-center font-semibold text-4xl py-6'>Info Card</h4>
